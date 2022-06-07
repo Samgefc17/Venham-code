@@ -1,0 +1,30 @@
+# Vernom Cypher code
+
+myPad = (6, 2, 10, 4, 3, 1, 7)
+
+#Plain text message
+myMessage = 'Everton1878!'
+
+#Removing the uppercase
+myMessage = myMessage.lower()
+
+#Removing the spaces and special characters
+myMessage =''.join(c for c in myMessage if c.isalpha())
+
+#Lopping through the message
+x=-1
+enc=''
+for i in myMessage:
+    x=x+1
+    #print(ord(i))
+    #print(myPad[x])
+
+#Pad numbers plus position
+x=-1
+for i in myMessage:
+    x=x+1
+    #print(ord(i) + (myPad[x]))
+    enc=(ord(i) + (myPad[x]))
+    print(chr(enc))
+    
+      
